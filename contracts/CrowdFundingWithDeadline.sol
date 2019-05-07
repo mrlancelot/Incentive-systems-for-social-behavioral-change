@@ -53,7 +53,8 @@ contract CrowdFundingWithDeadline{
     }
 
     function collect() public inState(State.Succeeded){
-        if(beneficiary.send(totalCollected)){
+        address payable beneficiary_payable_addr=address(uint160(beneficiary));
+        if(beneficiary_payable_addr.send(totalCollected)){
             state = State.PaidOut;
         }else{
             state = State.Failed;
