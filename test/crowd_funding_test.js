@@ -118,4 +118,15 @@ contract('CrowdFundingWithDeadline', function(accounts){
         expect(fundingState.valueOf().toString()).to.equal(PAID_OUT_STATE);
     });
 
+    it('withdraw funda from contract', async function(){
+        await contract.contribute({value: ONE_ETH - 100, from : contractCreator});
+        await contract.setCurrentTime(601);
+        await contract.finishedCrowdFunding();
+
+        await contract.withdraw({from: contractCreator});
+        let amount = await contract.amounts.call(contractCreator);
+        // let targetAmount = parseFloat(amount);
+        expect(amount.toNumber()).to.equal(0);
+    });
+
 });
