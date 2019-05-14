@@ -1,0 +1,723 @@
+{
+  "contractName": "Utils",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "sumInEth",
+          "type": "uint256"
+        }
+      ],
+      "name": "etherToWei",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "timeInMin",
+          "type": "uint256"
+        }
+      ],
+      "name": "minutesToSeconds",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"timeInMin\",\"type\":\"uint256\"}],\"name\":\"minutesToSeconds\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"sumInEth\",\"type\":\"uint256\"}],\"name\":\"etherToWei\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/Utils.sol\":\"Utils\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/Utils.sol\":{\"keccak256\":\"0x20949d1f875afe205b5faddf9b22fb35ffb31c6d175c22fa87f57cd860f4d424\",\"urls\":[\"bzzr://82908965d39ede3b494f513606243498203b7e71ec31d4478890d4d22977c5a0\"]}},\"version\":1}",
+  "bytecode": "0x610139610030600b82828239805160001a6073146000811461002057610022565bfe5b5030600052607381538281f3fe7300000000000000000000000000000000000000003014608060405260043610610063576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063529b380f14610068578063d8916bb9146100aa575b600080fd5b6100946004803603602081101561007e57600080fd5b81019080803590602001909291905050506100ec565b6040518082815260200191505060405180910390f35b6100d6600480360360208110156100c057600080fd5b81019080803590602001909291905050506100f9565b6040518082815260200191505060405180910390f35b6000603c82029050919050565b6000670de0b6b3a76400008202905091905056fea165627a7a72305820b3302f37aa82e6486899199eb893330ef4bc848962dbefa16c9963801be1c4380029",
+  "deployedBytecode": "0x7300000000000000000000000000000000000000003014608060405260043610610063576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063529b380f14610068578063d8916bb9146100aa575b600080fd5b6100946004803603602081101561007e57600080fd5b81019080803590602001909291905050506100ec565b6040518082815260200191505060405180910390f35b6100d6600480360360208110156100c057600080fd5b81019080803590602001909291905050506100f9565b6040518082815260200191505060405180910390f35b6000603c82029050919050565b6000670de0b6b3a76400008202905091905056fea165627a7a72305820b3302f37aa82e6486899199eb893330ef4bc848962dbefa16c9963801be1c4380029",
+  "sourceMap": "36:249:3:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
+  "deployedSourceMap": "36:249:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;168:114;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;168:114:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;56:104;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;56:104:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;168:114;230:4;265:9;253;:21;246:28;;168:114;;;:::o;56:104::-;111:4;145:7;134:8;:18;127:25;;56:104;;;:::o",
+  "source": "pragma solidity >=0.4.21 <0.6.0;\r\n\r\nlibrary Utils{\r\n    function etherToWei(uint sumInEth) public pure returns(uint){\r\n        return sumInEth * 1 ether;\r\n    }\r\n\r\n    function minutesToSeconds(uint timeInMin) public pure returns(uint){\r\n        return timeInMin * 1 minutes;\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\pridh\\Desktop\\Incentive-systems-for-social-behavioral-change\\contracts\\Utils.sol",
+  "ast": {
+    "absolutePath": "/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/Utils.sol",
+    "exportedSymbols": {
+      "Utils": [
+        392
+      ]
+    },
+    "id": 393,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 367,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 392,
+        "linearizedBaseContracts": [
+          392
+        ],
+        "name": "Utils",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 378,
+              "nodeType": "Block",
+              "src": "116:44:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 376,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 374,
+                      "name": "sumInEth",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 369,
+                      "src": "134:8:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "*",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 375,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "145:7:3",
+                      "subdenomination": "ether",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                        "typeString": "int_const 1000000000000000000"
+                      },
+                      "value": "1"
+                    },
+                    "src": "134:18:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 373,
+                  "id": 377,
+                  "nodeType": "Return",
+                  "src": "127:25:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 379,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "etherToWei",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 370,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 369,
+                  "name": "sumInEth",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 379,
+                  "src": "76:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 368,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "76:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "75:15:3"
+            },
+            "returnParameters": {
+              "id": 373,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 372,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 379,
+                  "src": "111:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 371,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "111:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "110:6:3"
+            },
+            "scope": 392,
+            "src": "56:104:3",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 390,
+              "nodeType": "Block",
+              "src": "235:47:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 388,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 386,
+                      "name": "timeInMin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 381,
+                      "src": "253:9:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "*",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 387,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "265:9:3",
+                      "subdenomination": "minutes",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_60_by_1",
+                        "typeString": "int_const 60"
+                      },
+                      "value": "1"
+                    },
+                    "src": "253:21:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 385,
+                  "id": 389,
+                  "nodeType": "Return",
+                  "src": "246:28:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 391,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "minutesToSeconds",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 382,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 381,
+                  "name": "timeInMin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 391,
+                  "src": "194:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 380,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "194:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "193:16:3"
+            },
+            "returnParameters": {
+              "id": 385,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 384,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 391,
+                  "src": "230:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 383,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "230:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "229:6:3"
+            },
+            "scope": 392,
+            "src": "168:114:3",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 393,
+        "src": "36:249:3"
+      }
+    ],
+    "src": "0:285:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/Utils.sol",
+    "exportedSymbols": {
+      "Utils": [
+        392
+      ]
+    },
+    "id": 393,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 367,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 392,
+        "linearizedBaseContracts": [
+          392
+        ],
+        "name": "Utils",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 378,
+              "nodeType": "Block",
+              "src": "116:44:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 376,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 374,
+                      "name": "sumInEth",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 369,
+                      "src": "134:8:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "*",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 375,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "145:7:3",
+                      "subdenomination": "ether",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                        "typeString": "int_const 1000000000000000000"
+                      },
+                      "value": "1"
+                    },
+                    "src": "134:18:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 373,
+                  "id": 377,
+                  "nodeType": "Return",
+                  "src": "127:25:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 379,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "etherToWei",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 370,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 369,
+                  "name": "sumInEth",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 379,
+                  "src": "76:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 368,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "76:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "75:15:3"
+            },
+            "returnParameters": {
+              "id": 373,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 372,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 379,
+                  "src": "111:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 371,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "111:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "110:6:3"
+            },
+            "scope": 392,
+            "src": "56:104:3",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 390,
+              "nodeType": "Block",
+              "src": "235:47:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 388,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 386,
+                      "name": "timeInMin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 381,
+                      "src": "253:9:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "*",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 387,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "265:9:3",
+                      "subdenomination": "minutes",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_60_by_1",
+                        "typeString": "int_const 60"
+                      },
+                      "value": "1"
+                    },
+                    "src": "253:21:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 385,
+                  "id": 389,
+                  "nodeType": "Return",
+                  "src": "246:28:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 391,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "minutesToSeconds",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 382,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 381,
+                  "name": "timeInMin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 391,
+                  "src": "194:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 380,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "194:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "193:16:3"
+            },
+            "returnParameters": {
+              "id": 385,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 384,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 391,
+                  "src": "230:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 383,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "230:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "229:6:3"
+            },
+            "scope": 392,
+            "src": "168:114:3",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 393,
+        "src": "36:249:3"
+      }
+    ],
+    "src": "0:285:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.8",
+  "updatedAt": "2019-05-14T16:10:17.567Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

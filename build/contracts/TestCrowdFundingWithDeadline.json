@@ -1,0 +1,1249 @@
+{
+  "contractName": "TestCrowdFundingWithDeadline",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "beneficiary",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "amounts",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "beforeDeadline",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "fundingDeadline",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "collected",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "targetAmount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "state",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "contribute",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalCollected",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "collect",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "finishedCrowdFunding",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "contractName",
+          "type": "string"
+        },
+        {
+          "name": "targetAmountEth",
+          "type": "uint256"
+        },
+        {
+          "name": "durationInMin",
+          "type": "uint256"
+        },
+        {
+          "name": "beneficiaryAddress",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "addr",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "totalCollected",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "succeeded",
+          "type": "bool"
+        }
+      ],
+      "name": "CampaignFinished",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newTime",
+          "type": "uint256"
+        }
+      ],
+      "name": "setCurrentTime",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"newTime\",\"type\":\"uint256\"}],\"name\":\"setCurrentTime\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"beneficiary\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"amounts\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"beforeDeadline\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"fundingDeadline\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"collected\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"targetAmount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"state\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"contribute\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalCollected\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"collect\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"finishedCrowdFunding\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"contractName\",\"type\":\"string\"},{\"name\":\"targetAmountEth\",\"type\":\"uint256\"},{\"name\":\"durationInMin\",\"type\":\"uint256\"},{\"name\":\"beneficiaryAddress\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"addr\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"totalCollected\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"succeeded\",\"type\":\"bool\"}],\"name\":\"CampaignFinished\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/TestCrowdFundingWithDeadline.sol\":\"TestCrowdFundingWithDeadline\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/CrowdFundingWithDeadline.sol\":{\"keccak256\":\"0x884cacf2982d793b7b57cf074d8eb606ae7498ef9beff3bf57ddc3a81f582aac\",\"urls\":[\"bzzr://493a48e9268405268324e11c53d0b0875aac3e59ddc5d307b97ba8af4c57c25b\"]},\"/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/TestCrowdFundingWithDeadline.sol\":{\"keccak256\":\"0xaad9ac815a83acf320313f5987f7ff8ce10935f183e7dd6372b368a01e82def5\",\"urls\":[\"bzzr://17e59f4880a4cea4603ab8957d9fdeb2c5f030dad91a1d1ab8ae27279eb1c60a\"]},\"/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/Utils.sol\":{\"keccak256\":\"0x20949d1f875afe205b5faddf9b22fb35ffb31c6d175c22fa87f57cd860f4d424\",\"urls\":[\"bzzr://82908965d39ede3b494f513606243498203b7e71ec31d4478890d4d22977c5a0\"]}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b506040516200105938038062001059833981018060405260808110156200003757600080fd5b8101908080516401000000008111156200005057600080fd5b828101905060208101848111156200006757600080fd5b81518560018202830111640100000000821117156200008557600080fd5b5050929190602001805190602001909291908051906020019092919080519060200190929190505050838383838360009080519060200190620000ca929190620002c3565b5073__Utils_________________________________63d8916bb96001546040518263ffffffff167c01000000000000000000000000000000000000000000000000000000000281526004018082815260200191505060206040518083038186803b1580156200013957600080fd5b505af41580156200014e573d6000803e3d6000fd5b505050506040513d60208110156200016557600080fd5b810190808051906020019092919050505060018190555073__Utils_________________________________63529b380f836040518263ffffffff167c01000000000000000000000000000000000000000000000000000000000281526004018082815260200191505060206040518083038186803b158015620001e857600080fd5b505af4158015620001fd573d6000803e3d6000fd5b505050506040513d60208110156200021457600080fd5b81019080805190602001909291905050506200023e620002b9640100000000026401000000009004565b0160028190555080600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000600360146101000a81548160ff02191690836003811115620002a657fe5b0217905550505050505050505062000372565b6000600754905090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106200030657805160ff191683800117855562000337565b8280016001018555821562000337579182015b828111156200033657825182559160200191906001019062000319565b5b5090506200034691906200034a565b5090565b6200036f91905b808211156200036b57600081600090555060010162000351565b5090565b90565b610cd780620003826000396000f3fe6080604052600436106100d0576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde03146100d557806322f8e5661461016557806338af3eed146101a05780633ccfd60b146101f757806355a3b2c11461020e57806368bc004114610273578063796b23bb146102a257806384bcefd4146102cd578063953b8fb8146102fc578063c19d93fb14610327578063d7bb99ba14610360578063e29eb8361461036a578063e522538114610395578063f5bfd26d146103ac575b600080fd5b3480156100e157600080fd5b506100ea6103c3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561012a57808201518184015260208101905061010f565b50505050905090810190601f1680156101575780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561017157600080fd5b5061019e6004803603602081101561018857600080fd5b8101908080359060200190929190505050610461565b005b3480156101ac57600080fd5b506101b561046b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561020357600080fd5b5061020c610491565b005b34801561021a57600080fd5b5061025d6004803603602081101561023157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106f3565b6040518082815260200191505060405180910390f35b34801561027f57600080fd5b5061028861070b565b604051808215151515815260200191505060405180910390f35b3480156102ae57600080fd5b506102b761071e565b6040518082815260200191505060405180910390f35b3480156102d957600080fd5b506102e2610724565b604051808215151515815260200191505060405180910390f35b34801561030857600080fd5b50610311610737565b6040518082815260200191505060405180910390f35b34801561033357600080fd5b5061033c61073d565b6040518082600381111561034c57fe5b60ff16815260200191505060405180910390f35b610368610750565b005b34801561037657600080fd5b5061037f610919565b6040518082815260200191505060405180910390f35b3480156103a157600080fd5b506103aa61091f565b005b3480156103b857600080fd5b506103c1610a71565b005b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104595780601f1061042e57610100808354040283529160200191610459565b820191906000526020600020905b81548152906001019060200180831161043c57829003601f168201915b505050505081565b8060078190555050565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600180600381111561049f57fe5b600360149054906101000a900460ff1660038111156104ba57fe5b14151561052f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600d8152602001807f496e76616c69642073746174650000000000000000000000000000000000000081525060200191505060405180910390fd5b6000600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541115156105e6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260178152602001807f4e6f7468696e672077617320636f6e747269627574656400000000000000000081525060200191505060405180910390fd5b6000600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490506000600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f1935050505015156106ef5780600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055505b5050565b60046020528060005260406000206000915090505481565b6000600254610718610ca1565b10905090565b60025481565b600560009054906101000a900460ff1681565b60015481565b600360149054906101000a900460ff1681565b600080600381111561075e57fe5b600360149054906101000a900460ff16600381111561077957fe5b1415156107ee576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600d8152602001807f496e76616c69642073746174650000000000000000000000000000000000000081525060200191505060405180910390fd5b6107f661070b565b1515610890576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001807f4e6f20636f6e747269627574696f6e7320616665722074686520646561646c6981526020017f6e6500000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b34600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254019250508190555034600660008282540192505081905550600154600654101515610916576001600560006101000a81548160ff0219169083151502179055505b50565b60065481565b600280600381111561092d57fe5b600360149054906101000a900460ff16600381111561094857fe5b1415156109bd576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600d8152602001807f496e76616c69642073746174650000000000000000000000000000000000000081525060200191505060405180910390fd5b6000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690508073ffffffffffffffffffffffffffffffffffffffff166108fc6006549081150290604051600060405180830381858888f1935050505015610a485760038060146101000a81548160ff02191690836003811115610a3e57fe5b0217905550610a6d565b6001600360146101000a81548160ff02191690836003811115610a6757fe5b02179055505b5050565b6000806003811115610a7f57fe5b600360149054906101000a900460ff166003811115610a9a57fe5b141515610b0f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600d8152602001807f496e76616c69642073746174650000000000000000000000000000000000000081525060200191505060405180910390fd5b610b1761070b565b151515610bb2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260288152602001807f43616e6e6f742066696e6973682063616d706169676e206265666f726520612081526020017f646561646c696e6500000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b600560009054906101000a900460ff161515610bf1576001600360146101000a81548160ff02191690836003811115610be757fe5b0217905550610c16565b6002600360146101000a81548160ff02191690836003811115610c1057fe5b02179055505b7f6fa7e87ebbd87ed4f1c40bba63144f68fd2bb022fb748ab3b61b5411c39bd47430600654600560009054906101000a900460ff16604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182151515158152602001935050505060405180910390a150565b600060075490509056fea165627a7a72305820875384e579bfc62dce15adca75c3fc923442f00dc5d9aade8f1b2dbb609770090029",
+  "deployedBytecode": "0x6080604052600436106100d0576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde03146100d557806322f8e5661461016557806338af3eed146101a05780633ccfd60b146101f757806355a3b2c11461020e57806368bc004114610273578063796b23bb146102a257806384bcefd4146102cd578063953b8fb8146102fc578063c19d93fb14610327578063d7bb99ba14610360578063e29eb8361461036a578063e522538114610395578063f5bfd26d146103ac575b600080fd5b3480156100e157600080fd5b506100ea6103c3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561012a57808201518184015260208101905061010f565b50505050905090810190601f1680156101575780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561017157600080fd5b5061019e6004803603602081101561018857600080fd5b8101908080359060200190929190505050610461565b005b3480156101ac57600080fd5b506101b561046b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561020357600080fd5b5061020c610491565b005b34801561021a57600080fd5b5061025d6004803603602081101561023157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506106f3565b6040518082815260200191505060405180910390f35b34801561027f57600080fd5b5061028861070b565b604051808215151515815260200191505060405180910390f35b3480156102ae57600080fd5b506102b761071e565b6040518082815260200191505060405180910390f35b3480156102d957600080fd5b506102e2610724565b604051808215151515815260200191505060405180910390f35b34801561030857600080fd5b50610311610737565b6040518082815260200191505060405180910390f35b34801561033357600080fd5b5061033c61073d565b6040518082600381111561034c57fe5b60ff16815260200191505060405180910390f35b610368610750565b005b34801561037657600080fd5b5061037f610919565b6040518082815260200191505060405180910390f35b3480156103a157600080fd5b506103aa61091f565b005b3480156103b857600080fd5b506103c1610a71565b005b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104595780601f1061042e57610100808354040283529160200191610459565b820191906000526020600020905b81548152906001019060200180831161043c57829003601f168201915b505050505081565b8060078190555050565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600180600381111561049f57fe5b600360149054906101000a900460ff1660038111156104ba57fe5b14151561052f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600d8152602001807f496e76616c69642073746174650000000000000000000000000000000000000081525060200191505060405180910390fd5b6000600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541115156105e6576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260178152602001807f4e6f7468696e672077617320636f6e747269627574656400000000000000000081525060200191505060405180910390fd5b6000600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490506000600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f1935050505015156106ef5780600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055505b5050565b60046020528060005260406000206000915090505481565b6000600254610718610ca1565b10905090565b60025481565b600560009054906101000a900460ff1681565b60015481565b600360149054906101000a900460ff1681565b600080600381111561075e57fe5b600360149054906101000a900460ff16600381111561077957fe5b1415156107ee576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600d8152602001807f496e76616c69642073746174650000000000000000000000000000000000000081525060200191505060405180910390fd5b6107f661070b565b1515610890576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001807f4e6f20636f6e747269627574696f6e7320616665722074686520646561646c6981526020017f6e6500000000000000000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b34600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254019250508190555034600660008282540192505081905550600154600654101515610916576001600560006101000a81548160ff0219169083151502179055505b50565b60065481565b600280600381111561092d57fe5b600360149054906101000a900460ff16600381111561094857fe5b1415156109bd576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600d8152602001807f496e76616c69642073746174650000000000000000000000000000000000000081525060200191505060405180910390fd5b6000600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690508073ffffffffffffffffffffffffffffffffffffffff166108fc6006549081150290604051600060405180830381858888f1935050505015610a485760038060146101000a81548160ff02191690836003811115610a3e57fe5b0217905550610a6d565b6001600360146101000a81548160ff02191690836003811115610a6757fe5b02179055505b5050565b6000806003811115610a7f57fe5b600360149054906101000a900460ff166003811115610a9a57fe5b141515610b0f576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252600d8152602001807f496e76616c69642073746174650000000000000000000000000000000000000081525060200191505060405180910390fd5b610b1761070b565b151515610bb2576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260288152602001807f43616e6e6f742066696e6973682063616d706169676e206265666f726520612081526020017f646561646c696e6500000000000000000000000000000000000000000000000081525060400191505060405180910390fd5b600560009054906101000a900460ff161515610bf1576001600360146101000a81548160ff02191690836003811115610be757fe5b0217905550610c16565b6002600360146101000a81548160ff02191690836003811115610c1057fe5b02179055505b7f6fa7e87ebbd87ed4f1c40bba63144f68fd2bb022fb748ab3b61b5411c39bd47430600654600560009054906101000a900460ff16604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182151515158152602001935050505060405180910390a150565b600060075490509056fea165627a7a72305820875384e579bfc62dce15adca75c3fc923442f00dc5d9aade8f1b2dbb609770090029",
+  "sourceMap": "78:534:2:-;;;169:265;8:9:-1;5:2;;;30:1;27;20:12;5:2;169:265:2;;;;;;;;;;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;169:265:2;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;169:265:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;354:12;367:15;383:13;397:18;866:12:0;859:4;:19;;;;;;;;;;;;:::i;:::-;;904:5;:16;921:12;;904:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;904:30:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;904:30:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;904:30:0;;;;;;;;;;;;;;;;889:12;:45;;;;979:5;:22;1002:13;979:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;979:37:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;979:37:0;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;979:37:0;;;;;;;;;;;;;;;;963:13;:11;;;:13;;;:::i;:::-;:53;945:15;:71;;;;1041:18;1027:11;;:32;;;;;;;;;;;;;;;;;;1078:13;1070:5;;:21;;;;;;;;;;;;;;;;;;;;;;;;681:418;;;;169:265:2;;;;78:534;;444:80;489:4;512;;505:11;;444:80;:::o;78:534::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "78:534:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;301:18:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;301:18:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;301:18:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;532:77:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;532:77:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;532:77:2;;;;;;;;;;;;;;;;;;;;391:26:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;391:26:0;;;;;;;;;;;;;;;;;;;;;;;;;;;2093:314;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2093:314:0;;;;;;449:39;;8:9:-1;5:2;;;30:1;27;20:12;5:2;449:39:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;449:39:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2415:108;;8:9:-1;5:2;;;30:1;27;20:12;5:2;2415:108:0;;;;;;;;;;;;;;;;;;;;;;;;;;;357:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;357:27:0;;;;;;;;;;;;;;;;;;;;;;;495:21;;8:9:-1;5:2;;;30:1;27;20:12;5:2;495:21:0;;;;;;;;;;;;;;;;;;;;;;;;;;;326:24;;8:9:-1;5:2;;;30:1;27;20:12;5:2;326:24:0;;;;;;;;;;;;;;;;;;;;;;;424:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;424:18:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1107:311;;;;;;523:26;;8:9:-1;5:2;;;30:1;27;20:12;5:2;523:26:0;;;;;;;;;;;;;;;;;;;;;;;1788:297;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1788:297:0;;;;;;1427:353;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1427:353:0;;;;;;301:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;532:77:2:-;594:7;587:4;:14;;;;532:77;:::o;391:26:0:-;;;;;;;;;;;;;:::o;2093:314::-;2128:12;623:13;614:22;;;;;;;;:5;;;;;;;;;;;:22;;;;;;;;;606:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2182:1;2160:7;:19;2168:10;2160:19;;;;;;;;;;;;;;;;:23;2152:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2222:16;2241:7;:19;2249:10;2241:19;;;;;;;;;;;;;;;;2222:38;;2293:1;2271:7;:19;2279:10;2271:19;;;;;;;;;;;;;;;:23;;;;2311:10;:15;;:28;2327:11;2311:28;;;;;;;;;;;;;;;;;;;;;;;2310:29;2307:93;;;2377:11;2355:7;:19;2363:10;2355:19;;;;;;;;;;;;;;;:33;;;;2307:93;664:1;2093:314;:::o;449:39::-;;;;;;;;;;;;;;;;;:::o;2415:108::-;2461:4;2500:15;;2484:13;:11;:13::i;:::-;:31;2477:38;;2415:108;:::o;357:27::-;;;;:::o;495:21::-;;;;;;;;;;;;;:::o;326:24::-;;;;:::o;424:18::-;;;;;;;;;;;;;:::o;1107:311::-;1152:13;623;614:22;;;;;;;;:5;;;;;;;;;;;:22;;;;;;;;;606:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1185:16;:14;:16::i;:::-;1177:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1274:9;1251:7;:19;1259:10;1251:19;;;;;;;;;;;;;;;;:32;;;;;;;;;;;1312:9;1294:14;;:27;;;;;;;;;;;1355:12;;1337:14;;:30;;1334:77;;;1395:4;1383:9;;:16;;;;;;;;;;;;;;;;;;1334:77;1107:311;:::o;523:26::-;;;;:::o;1788:297::-;1822:15;623:13;614:22;;;;;;;;:5;;;;;;;;;;;:22;;;;;;;;;606:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1849:40;1906:11;;;;;;;;;;;1849:70;;1933:24;:29;;:45;1963:14;;1933:45;;;;;;;;;;;;;;;;;;;;;;;1930:148;;;2002:13;1994:5;;:21;;;;;;;;;;;;;;;;;;;;;;;;1930:148;;;2054:12;2046:5;;:20;;;;;;;;;;;;;;;;;;;;;;;;1930:148;664:1;1788:297;:::o;1427:353::-;1474:13;623;614:22;;;;;;;;:5;;;;;;;;;;;:22;;;;;;;;;606:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1508:16;:14;:16::i;:::-;1507:17;1499:70;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1586:9;;;;;;;;;;;1585:10;1582:115;;;1619:12;1611:5;;:20;;;;;;;;;;;;;;;;;;;;;;;;1582:115;;;1670:15;1662:5;;:23;;;;;;;;;;;;;;;;;;;;;;;;1582:115;1714:58;1739:4;1746:14;;1762:9;;;;;;;;;;;1714:58;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1427:353;:::o;444:80:2:-;489:4;512;;505:11;;444:80;:::o",
+  "source": "pragma solidity >=0.4.21 <0.6.0;\r\nimport \"./CrowdFundingWithDeadline.sol\";\r\n\r\ncontract TestCrowdFundingWithDeadline is CrowdFundingWithDeadline {\r\n    uint time;\r\n\r\n    constructor(\r\n        string memory contractName,\r\n        uint targetAmountEth,\r\n        uint durationInMin,\r\n        address beneficiaryAddress\r\n    )\r\n\r\n    CrowdFundingWithDeadline(contractName,targetAmountEth,durationInMin,beneficiaryAddress) public {\r\n\r\n    }\r\n\r\n\r\n    function currentTime() internal view returns(uint){\r\n        return time;\r\n    }\r\n\r\n    function setCurrentTime(uint newTime) public{\r\n        time = newTime;\r\n    }\r\n}\r\n\r\n",
+  "sourcePath": "C:/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/TestCrowdFundingWithDeadline.sol",
+  "ast": {
+    "absolutePath": "/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/TestCrowdFundingWithDeadline.sol",
+    "exportedSymbols": {
+      "TestCrowdFundingWithDeadline": [
+        365
+      ]
+    },
+    "id": 366,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 323,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "absolutePath": "/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/CrowdFundingWithDeadline.sol",
+        "file": "./CrowdFundingWithDeadline.sol",
+        "id": 324,
+        "nodeType": "ImportDirective",
+        "scope": 366,
+        "sourceUnit": 265,
+        "src": "34:40:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 325,
+              "name": "CrowdFundingWithDeadline",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 264,
+              "src": "119:24:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CrowdFundingWithDeadline_$264",
+                "typeString": "contract CrowdFundingWithDeadline"
+              }
+            },
+            "id": 326,
+            "nodeType": "InheritanceSpecifier",
+            "src": "119:24:2"
+          }
+        ],
+        "contractDependencies": [
+          264
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 365,
+        "linearizedBaseContracts": [
+          365,
+          264
+        ],
+        "name": "TestCrowdFundingWithDeadline",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 328,
+            "name": "time",
+            "nodeType": "VariableDeclaration",
+            "scope": 365,
+            "src": "151:9:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 327,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "151:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 345,
+              "nodeType": "Block",
+              "src": "424:10:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 346,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 339,
+                    "name": "contractName",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 330,
+                    "src": "354:12:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 340,
+                    "name": "targetAmountEth",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 332,
+                    "src": "367:15:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 341,
+                    "name": "durationInMin",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 334,
+                    "src": "383:13:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 342,
+                    "name": "beneficiaryAddress",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 336,
+                    "src": "397:18:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 343,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 338,
+                  "name": "CrowdFundingWithDeadline",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 264,
+                  "src": "329:24:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_CrowdFundingWithDeadline_$264_$",
+                    "typeString": "type(contract CrowdFundingWithDeadline)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "329:87:2"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 337,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 330,
+                  "name": "contractName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 346,
+                  "src": "191:26:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 329,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 332,
+                  "name": "targetAmountEth",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 346,
+                  "src": "228:20:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 331,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "228:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 334,
+                  "name": "durationInMin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 346,
+                  "src": "259:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 333,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "259:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 336,
+                  "name": "beneficiaryAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 346,
+                  "src": "288:26:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 335,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "288:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "180:141:2"
+            },
+            "returnParameters": {
+              "id": 344,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "424:0:2"
+            },
+            "scope": 365,
+            "src": "169:265:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 353,
+              "nodeType": "Block",
+              "src": "494:30:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 351,
+                    "name": "time",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 328,
+                    "src": "512:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 350,
+                  "id": 352,
+                  "nodeType": "Return",
+                  "src": "505:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 354,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currentTime",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 347,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "464:2:2"
+            },
+            "returnParameters": {
+              "id": 350,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 349,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 354,
+                  "src": "489:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 348,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "489:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "488:6:2"
+            },
+            "scope": 365,
+            "src": "444:80:2",
+            "stateMutability": "view",
+            "superFunction": 263,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 363,
+              "nodeType": "Block",
+              "src": "576:33:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 361,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 359,
+                      "name": "time",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 328,
+                      "src": "587:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 360,
+                      "name": "newTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 356,
+                      "src": "594:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "587:14:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 362,
+                  "nodeType": "ExpressionStatement",
+                  "src": "587:14:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 364,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCurrentTime",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 357,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 356,
+                  "name": "newTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 364,
+                  "src": "556:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 355,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "556:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "555:14:2"
+            },
+            "returnParameters": {
+              "id": 358,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "576:0:2"
+            },
+            "scope": 365,
+            "src": "532:77:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 366,
+        "src": "78:534:2"
+      }
+    ],
+    "src": "0:616:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/TestCrowdFundingWithDeadline.sol",
+    "exportedSymbols": {
+      "TestCrowdFundingWithDeadline": [
+        365
+      ]
+    },
+    "id": 366,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 323,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "absolutePath": "/C/Users/pridh/Desktop/Incentive-systems-for-social-behavioral-change/contracts/CrowdFundingWithDeadline.sol",
+        "file": "./CrowdFundingWithDeadline.sol",
+        "id": 324,
+        "nodeType": "ImportDirective",
+        "scope": 366,
+        "sourceUnit": 265,
+        "src": "34:40:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 325,
+              "name": "CrowdFundingWithDeadline",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 264,
+              "src": "119:24:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CrowdFundingWithDeadline_$264",
+                "typeString": "contract CrowdFundingWithDeadline"
+              }
+            },
+            "id": 326,
+            "nodeType": "InheritanceSpecifier",
+            "src": "119:24:2"
+          }
+        ],
+        "contractDependencies": [
+          264
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 365,
+        "linearizedBaseContracts": [
+          365,
+          264
+        ],
+        "name": "TestCrowdFundingWithDeadline",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 328,
+            "name": "time",
+            "nodeType": "VariableDeclaration",
+            "scope": 365,
+            "src": "151:9:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 327,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "151:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 345,
+              "nodeType": "Block",
+              "src": "424:10:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 346,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 339,
+                    "name": "contractName",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 330,
+                    "src": "354:12:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 340,
+                    "name": "targetAmountEth",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 332,
+                    "src": "367:15:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 341,
+                    "name": "durationInMin",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 334,
+                    "src": "383:13:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 342,
+                    "name": "beneficiaryAddress",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 336,
+                    "src": "397:18:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 343,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 338,
+                  "name": "CrowdFundingWithDeadline",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 264,
+                  "src": "329:24:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_CrowdFundingWithDeadline_$264_$",
+                    "typeString": "type(contract CrowdFundingWithDeadline)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "329:87:2"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 337,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 330,
+                  "name": "contractName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 346,
+                  "src": "191:26:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 329,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 332,
+                  "name": "targetAmountEth",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 346,
+                  "src": "228:20:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 331,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "228:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 334,
+                  "name": "durationInMin",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 346,
+                  "src": "259:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 333,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "259:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 336,
+                  "name": "beneficiaryAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 346,
+                  "src": "288:26:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 335,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "288:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "180:141:2"
+            },
+            "returnParameters": {
+              "id": 344,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "424:0:2"
+            },
+            "scope": 365,
+            "src": "169:265:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 353,
+              "nodeType": "Block",
+              "src": "494:30:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 351,
+                    "name": "time",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 328,
+                    "src": "512:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 350,
+                  "id": 352,
+                  "nodeType": "Return",
+                  "src": "505:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 354,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currentTime",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 347,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "464:2:2"
+            },
+            "returnParameters": {
+              "id": 350,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 349,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 354,
+                  "src": "489:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 348,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "489:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "488:6:2"
+            },
+            "scope": 365,
+            "src": "444:80:2",
+            "stateMutability": "view",
+            "superFunction": 263,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 363,
+              "nodeType": "Block",
+              "src": "576:33:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 361,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 359,
+                      "name": "time",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 328,
+                      "src": "587:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 360,
+                      "name": "newTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 356,
+                      "src": "594:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "587:14:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 362,
+                  "nodeType": "ExpressionStatement",
+                  "src": "587:14:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 364,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCurrentTime",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 357,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 356,
+                  "name": "newTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 364,
+                  "src": "556:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 355,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "556:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "555:14:2"
+            },
+            "returnParameters": {
+              "id": 358,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "576:0:2"
+            },
+            "scope": 365,
+            "src": "532:77:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 366,
+        "src": "78:534:2"
+      }
+    ],
+    "src": "0:616:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.8",
+  "updatedAt": "2019-05-14T16:10:17.564Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -118,7 +118,7 @@ contract('CrowdFundingWithDeadline', function(accounts){
         expect(fundingState.valueOf().toString()).to.equal(PAID_OUT_STATE);
     });
 
-    it('withdraw funda from contract', async function(){
+    it('withdraw funds from contract', async function(){
         await contract.contribute({value: ONE_ETH - 100, from : contractCreator});
         await contract.setCurrentTime(601);
         await contract.finishedCrowdFunding();
@@ -128,5 +128,16 @@ contract('CrowdFundingWithDeadline', function(accounts){
         // let targetAmount = parseFloat(amount);
         expect(amount.toNumber()).to.equal(0);
     });
+
+    // it('event is emitted', async function(){
+    //     let watcher = contract.CampaignFinished();
+    //     await contract.setCurrentTime(601);
+    //     await contract.finishedCrowdFunding();
+
+    //     let events = await watcher.get();
+    //     let event = events[0];
+    //     expect(event.args.totalCollected.toNumber()).to.equal(0);
+    //     expect(event.args.succeeded).to.equal(false);
+    // });
 
 });
